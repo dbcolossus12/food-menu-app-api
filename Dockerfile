@@ -17,7 +17,7 @@ RUN python -m venv /py && \
     /py/bin/pip install --upgrade pip && \
     /py/bin/pip install -r /temp/requirements.txt && \
     #using if condition in shell scripting
-    if [$DEV = "true"]; \
+    if [ $DEV = "true" ]; \
         then /py/bin/pip install -r /temp/requirements.dev.txt ; \
     #ending the if condition with fi
     fi && \
